@@ -68,6 +68,11 @@ header {
 
 }
 
+.logo picture {
+    display: block;
+    height: 100%
+}
+
 
 .logo img {
     display: block;
@@ -132,6 +137,9 @@ header {
     background-color: var(--secondary-color);
 }
 
+.hero picture {
+    display: block;
+}
 
 .hero img {
     display: block;
@@ -159,13 +167,19 @@ header {
     padding: 3rem;
 }
 
-.image-gallery img {
+.image-gallery picture {
+    display: block;
+    width: 100%;
     max-width: 550px;
+    margin: 0 auto;
+}
+
+.image-gallery img {
+    display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    margin: 0 auto;
 }
 
 /*
@@ -199,6 +213,11 @@ header {
 .image-comparison h2 {
     grid-column: 1 / -1;
 }
+
+/* .image-comparison picture {
+    display: block; 
+    min-width: 0;
+} */
 
 .image-comparison img {
     display: block;
