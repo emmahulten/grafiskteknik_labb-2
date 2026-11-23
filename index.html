@@ -18,6 +18,15 @@
         <!-- Logotyp men inbyggd länk till startsida-->
         <a href="index.html" class="logo">
             <img src="images/logo.svg" alt="Perspektivs logotyp">
+<!--             <picture>
+                <source srcset="images/logo.webp" type="image/webp">
+                <img
+                    src="images/logo.png"
+                    alt="Perspektivs logotyp"
+                    width="500"
+                    height="500"
+                >
+            </picture> -->
         </a>
 
         <!-- Navigation/Meny -->
@@ -32,7 +41,24 @@
     </header>
     <main>
         <section class="hero">
-            <img src="images/hero.png" alt="">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcser="
+                        images/hero-480.webp 480w,
+                        images/hero-960.webp 960w,
+                        images/hero-1920.webp 1920w
+                    "
+                    sizes="100vw"
+                >
+                <img
+                    src="images/hero-1920.jpg"
+                    alr=""
+                    width="1920"
+                    height="1160"
+                    fetchpriority="high"
+                >
+            </picture>
         </section>
         <section class="intro">
             <h1>Perspektiv</h1>
@@ -45,9 +71,36 @@
         </section>
 
         <section class="image-gallery">
-            <img src="images/bildserie001.jpeg" alt="Historisk kyrkobyggnad med rund kupol och detaljerad tegelfasad">
-            <img src="images/bildserie002.jpeg" alt="Rad av färgglada historiska byggnader längs en stadsgata">
-            <img src="images/bildserie003.jpeg" alt="Kanal med förtöjda båtar och pastellfärgade hus längs vattnet">
+            <picture>
+                <source srcset="images/bildserie001.webp" type="image/webp">
+                <img 
+                    src="images/bildserie001.jpg"
+                    alt="Historisk kyrkobyggnad med rund kupol och detaljerad tegelfasad"
+                    width="1000"
+                    height="1384"
+                    loading="lazy"
+                >
+            </picture>
+            <picture>
+                <source srcset="images/bildserie002.webp" type="image/webp">
+                <img 
+                    src="images/bildserie002.jpg"
+                    alt="Rad av färgglada historiska byggnader längs en stadsgata"
+                    width="1000"
+                    height="821"
+                    loading="lazy"
+                >
+            </picture>
+            <picture>
+                <source srcset="images/bildserie003.webp" type="image/webp">
+                <img
+                    src="images/bildserie003.jpg"
+                    alt="Kanal med förtöjda båtar och pastellfärgade hus längs vattnet"
+                    width="1000"
+                    height="927"
+                    loading="lazy"
+                >
+            </picture>
         </section>
     </main>
 
