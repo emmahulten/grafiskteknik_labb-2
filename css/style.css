@@ -251,13 +251,20 @@ header {
     font-size: 1.6rem;
 }
 
-.about img {
+.about picture {
+    display: block;
     width: 50%;
+    min-width: 150px;
     max-width: 180px;
+    margin: 0 auto;
+}
+
+.about picture img {
+    display: block; 
+    width: 100%;
     height: auto;
-    padding: 0.2rem;
+    box-sizing: border-box;
     border: double 2px #d5ad79;
-    margin-top: 1rem;
 }
 
 

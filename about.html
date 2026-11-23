@@ -15,7 +15,12 @@
     <header>
         <!-- Logotyp men inbyggd länk till startsida-->
         <a href="index.html" class="logo">
-            <img src="images/logo.svg" alt="Perspektivs logotyp">
+            <img
+                src="images/logo.svg"
+                alt="Perspektivs logotyp"
+                width="500"
+                height="500"
+            >
         </a>
 
         <!-- Navigation/Meny -->
@@ -42,7 +47,16 @@
         </p>
         <p>När jag inte pluggar tycker jag om att spela Sims, möblera om, laga mat och umgås med familj och vänner.</p>
         </div>
-        <img src="images/portrait.png" alt="Porträtt av Emma i vit skjorta">
+        <picture>
+            <source srcset="images/portrait.webp" type="image/webp">
+            <img
+                src="images/portrait.png"
+                alt="Porträtt av Emma i vit skjorta"
+                width="465"
+                height="827"
+                fetchpriority="high"
+            >
+        </picture>
     </main>
     
 </body>
