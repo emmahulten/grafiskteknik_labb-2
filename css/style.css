@@ -12,10 +12,13 @@
 body {
     background-color: var(--secondary-color);
     margin: 0;
-    text-align: center;
     color: var(--primary-color);
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    line-height: 1.5;
 }
 
 a {
@@ -27,16 +30,29 @@ a:hover {
     text-decoration: underline;
 }
 
-h1,
-h2 {
+h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
-    padding-top: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 .accent-text {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.4rem;
+    text-align: center;
 }
 
 
@@ -82,7 +98,7 @@ header {
 }
 
 
-/* Haburgemeny */
+/* Haburgermeny */
 .menu-toggle {
     grid-column: 3;
     grid-row: 1;
@@ -105,18 +121,19 @@ header {
 
     max-height: 0;
     overflow: hidden;
+    visibility: hidden;
 }
 
 /* Visar meny när klassen open läggs till */
 .menu.open {
     max-height: 500px;
     transition: max-height 0.5s ease-out;
+    visibility: visible;
 }
 
 .menu ul {
     list-style: none;
-    padding: 0;
-    padding-top: 1rem;
+    padding: 1rem 0 0;
     margin: 1rem;
     font-size: 1.2rem;
 
@@ -125,10 +142,6 @@ header {
 
 .menu li {
     padding-bottom: 1rem;
-}
-
-.menu a:hover {
-    text-decoration: underline;
 }
 
 
@@ -162,7 +175,8 @@ header {
 }
 
 .intro {
-    padding: 0 2.5rem;
+    width: 85%;
+    margin: 0 auto;
 }
 
 /* Bild grid på startsidan */
@@ -170,14 +184,13 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 3rem;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .image-gallery picture {
     display: block;
     width: 100%;
-    max-width: 550px;
-    margin: 0 auto;
 }
 
 .image-gallery img {
@@ -186,44 +199,46 @@ header {
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 /*
- --- Bildregsigerings sidan ---
+ --- Bildregsigeringssidan ---
 */
 
 .image-intro {
-    padding: 1rem;
+    width: 85%;
+    max-width: 1400px;
+    margin: 1.5rem auto;
+
+    padding: 2rem 1rem;
+    box-sizing: border-box;
     background-color: var(--primary-color);
     color: black;
-    margin: 1.5rem;
 }
 
 .image-intro h1 {
     margin: 0;
 }
 
+
 .editing-gallery {
-    padding: 1.5rem;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1500px;
+/*     padding: 0 1.5rem 1.5rem; */
 }
 
 .image-comparison {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.3rem 1rem;
-    width: 90%;
-    max-width: 900px;
     margin: 0 auto 2rem;
 }
 
-.image-comparison h2 {
+.image-comparison h3 {
     grid-column: 1 / -1;
 }
-
-/* .image-comparison picture {
-    display: block; 
-    min-width: 0;
-} */
 
 .image-comparison img {
     display: block;
@@ -233,14 +248,13 @@ header {
 
 .image-label {
     margin: 0;
-
+    text-align: center;
 }
 
 .edit-info {
     grid-column: 1 / -1;
-    margin: 0.2rem 0;
-    text-align: left;
-
+    margin: 0 auto;
+    width: 90%
 }
 
 /*
@@ -252,7 +266,6 @@ header {
 }
 
 .about h1 {
-    grid-column: 1;
     margin-top: 3rem;
     font-size: 1.6rem;
 }
@@ -266,7 +279,7 @@ header {
 }
 
 .about picture img {
-    display: block; 
+    display: block;
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -279,9 +292,18 @@ header {
         font-size: 1.2rem;
     }
 
-    .image-gallery {
-        margin-top: 1rem;
+    .intro {
+        width: 95%;
+    }
 
+    .intro-text {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 2rem;
     }
 
     header {
@@ -299,6 +321,18 @@ header {
 
     }
 
+    .image-intro p {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
+
+    .edit-info {
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+
     .about {
         display: flex;
         align-items: center;
@@ -313,9 +347,7 @@ header {
         text-align: left;
     }
 
-    .about-text h1 {
-        text-align: center;
-    }
+
 
 }
 
@@ -325,28 +357,13 @@ header {
         max-height: 440px;
     }
 
-    .intro {
-        width: 60%;
-        margin: 1rem auto;
+    .intro-text {
+        width: 70%;
     }
 
     .image-gallery {
-        grid-template-columns: repeat(3, 1fr);
         margin: 1rem auto 0;
     }
-
-    .image-intro {
-        padding: 2rem 6rem;
-        ;
-        width: 70%;
-        margin: 2rem auto;
-    }
-
-    .image-intro p {
-        width: 85%;
-        margin: 1rem auto;
-    }
-
 
 }
 
@@ -357,6 +374,5 @@ header {
 
     .hero img {
         max-height: 600px;
-        object-position: top;
     }
 }

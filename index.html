@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="css/style.css">
+    <meta name="description" content="Perspektiv presenterar arkitekturfotografi och bildredigering med fokus på byggnader, detaljer och form.">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -15,21 +16,16 @@
 
 <body>
     <header>
-        <!-- Logotyp men inbyggd länk till startsida-->
+        <!-- Logotyp med inbyggd länk till startsida-->
         <a href="index.html" class="logo">
             <picture>
                 <source srcset="images/logo.webp" type="image/webp">
-                <img
-                src="images/logo.png"
-                alt="Perspektivs logotyp"
-                width="400"
-                height="400"
-            >
+                <img src="images/logo.png" alt="Perspektiv - Startsida" width="400" height="400">
             </picture>
         </a>
 
         <!-- Navigation/Meny -->
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" aria-label="Huvudmeny">☰</button>
         <nav class="menu">
             <ul>
                 <li><a href="index.html">Start</a></li>
@@ -39,70 +35,53 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <div class="hero">
             <picture>
-                <source
-                    type="image/webp"
-                    srcset="
+                <source type="image/webp" srcset="
                         images/hero-480.webp 480w,
                         images/hero-960.webp 960w,
                         images/hero-1920.webp 1920w
-                    "
-                    sizes="100vw"
-                >
-                <img
-                    src="images/hero-1920.jpg"
-                    alt="Historiska byggnader längs en gata i New York"
-                    width="1920"
-                    height="1160"
-                    fetchpriority="high"
-                >
+                    " sizes="100vw">
+                <img src="images/hero-1920.jpg" alt="Historiska byggnader längs en gata i New York" width="1920"
+                    height="1160" fetchpriority="high">
             </picture>
-        </section>
-        <section class="intro">
-            <h1>Perspektiv</h1>
-            <p class="accent-text">Arkitektur • Fotografi • Form</p>
-            <!--alt. ändra till "Byggnader, detaljer & perspektiv"-->
-            <p>På denna webbplats presenteras en bildserie med fokus på arkitektur och byggnader från olika delar av världen. 
-                Syftet med uppgiften är att bearbeta och anpassa fotografier för webben med hjälp av olika bildredigeringstekniker.
-            </p>
-            <p>Bilderna har redigerats i Affinity, där bland annat färger, ljus, kontrast och beskärning har justerats för att skapa ett mer enhetligt uttryck.</p>
-        </section>
+        </div>
 
-        <section class="image-gallery">
-            <picture>
-                <source srcset="images/bildserie001.webp" type="image/webp">
-                <img 
-                    src="images/bildserie001.jpg"
-                    alt="Historisk kyrkobyggnad med rund kupol och detaljerad tegelfasad"
-                    width="1000"
-                    height="1384"
-                    loading="lazy"
-                >
-            </picture>
-            <picture>
-                <source srcset="images/bildserie002.webp" type="image/webp">
-                <img 
-                    src="images/bildserie002.jpg"
-                    alt="Rad av färgglada historiska byggnader längs en stadsgata"
-                    width="1000"
-                    height="821"
-                    loading="lazy"
-                >
-            </picture>
-            <picture>
-                <source srcset="images/bildserie003.webp" type="image/webp">
-                <img
-                    src="images/bildserie003.jpg"
-                    alt="Kanal med förtöjda båtar och pastellfärgade hus längs vattnet"
-                    width="1000"
-                    height="927"
-                    loading="lazy"
-                >
-            </picture>
+        <section class="intro">
+            <div class="intro-text">
+                <h1>Perspektiv</h1>
+                <p class="accent-text">Arkitektur • Fotografi • Form</p>
+
+                <p>På denna webbplats presenteras en bildserie med fokus på arkitektur och byggnader från olika delar av
+                    världen.
+                    Syftet med uppgiften är att bearbeta och anpassa fotografier för webben med hjälp av olika
+                    bildredigeringstekniker.
+                </p>
+                <p>Bilderna har redigerats i Affinity, där bland annat färger, ljus, kontrast och beskärning har
+                    justerats
+                    för att skapa ett mer enhetligt uttryck.</p>
+            </div>
+            <div class="image-gallery">
+                <picture>
+                    <source srcset="images/bildserie001.webp" type="image/webp">
+                    <img src="images/bildserie001.jpg"
+                        alt="Historisk kyrkobyggnad med rund kupol och detaljerad tegelfasad" width="1000" height="1384"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="images/bildserie002.webp" type="image/webp">
+                    <img src="images/bildserie002.jpg" alt="Rad av färgglada historiska byggnader längs en stadsgata"
+                        width="1000" height="821" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="images/bildserie003.webp" type="image/webp">
+                    <img src="images/bildserie003.jpg"
+                        alt="Kanal med förtöjda båtar och pastellfärgade hus längs vattnet" width="1000" height="927"
+                        loading="lazy">
+                </picture>
+            </div>
         </section>
     </main>
-
 </body>
 
 </html>
